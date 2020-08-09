@@ -266,7 +266,7 @@ class App extends Component {
             <Route path="/altf4/assigndoctor" component={() => <AssignDoctor contract={this.contract} accounts = {this.accounts} web3={this.state.web3} />} />
           </Switch>
         </Router>
-        <Footer />
+        
       </div>
     );
   }
