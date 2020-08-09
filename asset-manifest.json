@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/altf4/static/css/main.1bd0db21.chunk.css",
+    "main.js": "/altf4/static/js/main.da930e15.chunk.js",
+    "main.js.map": "/altf4/static/js/main.da930e15.chunk.js.map",
+    "runtime-main.js": "/altf4/static/js/runtime-main.e8d09f10.js",
+    "runtime-main.js.map": "/altf4/static/js/runtime-main.e8d09f10.js.map",
+    "static/css/2.321be830.chunk.css": "/altf4/static/css/2.321be830.chunk.css",
+    "static/js/2.f0474d56.chunk.js": "/altf4/static/js/2.f0474d56.chunk.js",
+    "static/js/2.f0474d56.chunk.js.map": "/altf4/static/js/2.f0474d56.chunk.js.map",
+    "index.html": "/altf4/index.html",
+    "precache-manifest.c885634650500d45432f8d6f7169dd89.js": "/altf4/precache-manifest.c885634650500d45432f8d6f7169dd89.js",
+    "service-worker.js": "/altf4/service-worker.js",
+    "static/css/2.321be830.chunk.css.map": "/altf4/static/css/2.321be830.chunk.css.map",
+    "static/css/main.1bd0db21.chunk.css.map": "/altf4/static/css/main.1bd0db21.chunk.css.map",
+    "static/js/2.f0474d56.chunk.js.LICENSE.txt": "/altf4/static/js/2.f0474d56.chunk.js.LICENSE.txt",
+    "static/media/ManageCard.module.css": "/altf4/static/media/CardBg.d816a8b0.jpg",
+    "static/media/Home.module.css": "/altf4/static/media/SeguroMedico.df56a2fe.png",
+    "static/media/agreements.svg": "/altf4/static/media/agreements.771a0040.svg",
+    "static/media/mdb.css": "/altf4/static/media/arrow_right.8ef6a08c.svg",
+    "static/media/semantic.min.css": "/altf4/static/media/outline-icons.ef60a4f6.woff",
+    "static/media/contract.svg": "/altf4/static/media/contract.6efe8c9c.svg",
+    "static/media/all.min.css": "/altf4/static/media/fa-solid-900.ee09ad75.woff",
+    "static/media/payments.svg": "/altf4/static/media/payments.8667f767.svg",
+    "static/media/secure.svg": "/altf4/static/media/secure.9ff7a827.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e8d09f10.js",
+    "static/css/2.321be830.chunk.css",
+    "static/js/2.f0474d56.chunk.js",
+    "static/css/main.1bd0db21.chunk.css",
+    "static/js/main.da930e15.chunk.js"
+  ]
+}
