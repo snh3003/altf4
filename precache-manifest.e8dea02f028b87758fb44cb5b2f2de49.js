@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "63089b15133b1fbdc75be74c3c43ac7e",
+    "revision": "ef66fda3778234b7056d86eeea6f057b",
     "url": "/altf4/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/altf4/static/css/2.321be830.chunk.css"
   },
   {
-    "revision": "c68d2fa5b60e95510de2",
-    "url": "/altf4/static/css/main.1bd0db21.chunk.css"
+    "revision": "cb65c0937becf5c1ef76",
+    "url": "/altf4/static/css/main.3a46676d.chunk.css"
   },
   {
     "revision": "4fda41a6453e3e18b901",
@@ -20,16 +20,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/altf4/static/js/2.fe862669.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c68d2fa5b60e95510de2",
-    "url": "/altf4/static/js/main.03451a87.chunk.js"
+    "revision": "cb65c0937becf5c1ef76",
+    "url": "/altf4/static/js/main.8ba4f867.chunk.js"
   },
   {
     "revision": "4093aeebf3071e336ca8",
     "url": "/altf4/static/js/runtime-main.e8d09f10.js"
-  },
-  {
-    "revision": "d816a8b087aa0ee8f339f5e30ef594a5",
-    "url": "/altf4/static/media/CardBg.d816a8b0.jpg"
   },
   {
     "revision": "df56a2fec55855a270ab7957986bc941",
