@@ -4,64 +4,51 @@ import styles from './ManageCard.module.css';
 
 export const ManageCard = () => {
 
-    function handleClick(){
-        window.location.replace("https://www.w3schools.com");
+    function handleClickAdmin(){
+        window.location.replace("https://snh3003.github.io/altf4/admin");
+        
+    }
+
+    function handleClickDonote(){
+        window.location.replace("https://snh3003.github.io/altf4/donate");    
+    }
+
+    function handleClickDoctor(){
+        window.location.replace("https://snh3003.github.io/altf4/doctor");    
     }
 
     return (
         <div className={styles.cardbg}>
             <center><h2 className="display-3">Manage patients data</h2></center>
-            <CardGroup className="container-fluid">
-                <Card bg="info">
-                    <Card.Header>Header</Card.Header>
-                    <Card.Body>
-                    <Card.Title> Card Title </Card.Title>
-                    <Card.Text>
-                        Some quick example text to build on the card title and make up the bulk
-                        of the card's content.
-                    </Card.Text>
-                    <Button variant="dark" onClick={handleClick}>Go somewhere</Button>
-                    </Card.Body>
-                    
-                </Card>
-                <Card bg="primary">
-                    <Card.Header>Header</Card.Header>
-                    <Card.Body>
-                    <Card.Title> Card Title </Card.Title>
-                    <Card.Text>
-                        Some quick example text to build on the card title and make up the bulk
-                        of the card's content.
-                    </Card.Text>
-                    <Button variant="dark" onClick={handleClick}>Go somewhere</Button>
-                    </Card.Body>
-                    
-                </Card>
-            </CardGroup>
+            <br />
             <br />
             <CardGroup className="container-fluid">
-                <Card bg="info">
-                    <Card.Header>Header</Card.Header>
+                <Card bg="success">
+                    <center>
+                    <Card.Header>Are you an Admin?</Card.Header>
                     <Card.Body>
-                    <Card.Title> Card Title </Card.Title>
-                    <Card.Text>
-                        Some quick example text to build on the card title and make up the bulk
-                        of the card's content.
-                    </Card.Text>
-                    <Button variant="dark" onClick={handleClick}>Go somewhere</Button>
+                    <Card.Title> Want to add a new patient? Add a new admin? or doctor? </Card.Title>
+                    <Button variant="dark" onClick={handleClickAdmin}>Click here</Button>
                     </Card.Body>
-                    
+                    </center>
                 </Card>
                 <Card bg="primary">
-                    <Card.Header>Header</Card.Header>
-                    <Card.Body>
-                    <Card.Title> Card Title </Card.Title>
-                    <Card.Text>
-                        Some quick example text to build on the card title and make up the bulk
-                        of the card's content.
-                    </Card.Text>
-                    <Button variant="dark" onClick={handleClick}>Go somewhere</Button>
-                    </Card.Body>
-                    
+                    <center>
+                        <Card.Header>Donor?</Card.Header>
+                        <Card.Body>
+                        <Card.Title> Want to donate money for treatment of our patients? </Card.Title>
+                        <Button variant="dark" onClick={handleClickDonote}>Click here</Button>
+                        </Card.Body>
+                    </center>
+                </Card>
+                <Card bg="info">
+                    <center>
+                        <Card.Header>Are you a doctor?</Card.Header>
+                        <Card.Body>
+                        <Card.Title> Want to add or update patient's record? </Card.Title>
+                        <Button variant="dark" onClick={handleClickDoctor}>Click here</Button>
+                        </Card.Body>
+                    </center>
                 </Card>
             </CardGroup>      
             <hr />            

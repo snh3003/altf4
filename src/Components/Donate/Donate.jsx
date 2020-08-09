@@ -1,4 +1,5 @@
 import React from 'react';
+import { Table, Button} from 'react-bootstrap';
 import styles from './Donate.module.css';
 
 export class Donate extends React.Component{
@@ -15,7 +16,7 @@ export class Donate extends React.Component{
         console.log(this.state.publicRecordsArray);
         this.handlePublicMedicalRecord();
     }
-    
+
     //donate dashboard
     //table
     handlePublicMedicalRecord = async () => {
@@ -53,8 +54,41 @@ export class Donate extends React.Component{
 
     render(){
         return(
-            <div>
-                This is donation dashboard
+            <div className="container-fluid">
+                <center><h1 className="display-2">Donate to our patients</h1></center>
+                <Table striped bordered hover>
+                    <thead>
+                        <tr>
+                        <th>#</th>
+                        <th>Patient Name</th>
+                        <th>Disease</th>
+                        <th>Eth Address</th>
+                        <th>Donate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <td>1</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td><Button variant="success">Donate 0.01 Eth</Button></td>
+                        </tr>
+                        <tr>
+                        <td>2</td>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        <td><Button variant="success">Donate 0.01 Eth</Button></td>
+                        </tr>
+                        <tr>
+                        <td>3</td>
+                        <td colSpan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                        <td><Button variant="success">Donate 0.01 Eth</Button></td>
+                        </tr>
+                    </tbody>
+                    </Table>
             </div>
         )
     }

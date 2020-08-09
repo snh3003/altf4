@@ -41,6 +41,7 @@ class Admin extends React.Component{
 		
 		return (
 		<div>
+			
 			<center><h2 className="display-2">Roles that Admin can perform</h2></center>
 			<br />
 			<br />

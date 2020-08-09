@@ -10,7 +10,7 @@ export const NavBar = () => {
 					src="https://img.icons8.com/color/48/000000/health-book.png"
 					width='40px' height='40px'
 				/>
-				Serguro Medico
+				Seguro Medico
 				</Navbar.Brand>
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse id="basic-navbar-nav">
@@ -18,7 +18,7 @@ export const NavBar = () => {
 					<Nav className="ml-auto">
 						<Nav.Item>
 						    <label>
-						    	<Nav.Link href="/altf4/" className="NavLink">
+						    	<Nav.Link href="/altf4" className="NavLink">
 									Home
 								</Nav.Link>
 						    </label>

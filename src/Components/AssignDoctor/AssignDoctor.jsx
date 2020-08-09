@@ -45,9 +45,9 @@ export class AssignDoctor extends React.Component {
             <Card key={index}>
                 <Card.Content>
                     <Card.Header>{i.name}</Card.Header>
-                    <Card.Meta>Eth Address {i.patientAddress}</Card.Meta>
-                    <Card.Meta>Email: {i.email}</Card.Meta>
-                    <Card.Meta>Phone Number: {i.phoneNo}</Card.Meta>
+                    <Card.Meta><strong>Eth Address</strong> {i.patientAddress}</Card.Meta>
+                    <Card.Meta><strong>Email:</strong> {i.email}</Card.Meta>
+                    <Card.Meta><strong>Phone Number:</strong> {i.phoneNo}</Card.Meta>
                 </Card.Content>
                 <Card.Content extra>
                     <div className='ui two buttons'>
@@ -60,10 +60,11 @@ export class AssignDoctor extends React.Component {
         )
         return (
             <div>
-                <h1>Patient List</h1>
+                <center><h1 className="display-3">Patient List</h1>
                 <Card.Group>
                   {patientList}
-              </Card.Group>
+                </Card.Group>
+                </center>
             </div>
         )
     }
