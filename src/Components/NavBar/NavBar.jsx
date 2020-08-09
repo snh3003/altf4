@@ -18,7 +18,7 @@ export const NavBar = () => {
 					<Nav className="ml-auto">
 						<Nav.Item>
 						    <label>
-						    	<Nav.Link href="/altf4" className="NavLink">
+						    	<Nav.Link href="/altf4/" className="NavLink">
 									Home
 								</Nav.Link>
 						    </label>

@@ -259,7 +259,7 @@ class App extends Component {
         <NavBar />
         <Router>
           <Switch>
-            <Route exact path='/altf4' component={() => <Home contract={this.contract} accounts = {this.accounts} web3={this.state.web3}/>} />
+            <Route exact path='/altf4/' component={() => <Home contract={this.contract} accounts = {this.accounts} web3={this.state.web3}/>} />
             <Route path="/altf4/doctor" component={() => <Doctor contract={this.contract} accounts = {this.accounts} web3={this.state.web3}/>} />
             <Route path="/altf4/admin" component={() => <Admin contract={this.contract} accounts = {this.accounts}  web3={this.state.web3} />} />
             <Route path="/altf4/donate" component={() => <Donate contract={this.contract} accounts = {this.accounts} web3={this.state.web3} />} />

@@ -1,82 +1,71 @@
 import React from 'react';
-import { Form, Button, Jumbotron, Col } from 'react-bootstrap';
+import { Button, Card} from 'semantic-ui-react';
 
-export class AssignDoctorForm extends React.Component{
-    constructor() {
-        super();
+export class AssignDoctor extends React.Component {
+    constructor(props){
+        super(props);
         this.state = {
-          docAddress: "",
-          patientId: "",
-          patientAddress: ""
-        };
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-      }
-    
-      handleChange(event) {
-        const target = event.target;
-        const value = target.type === "checkbox" ? target.checked : target.value;
-        const name = target.name;
-        this.setState({
-          [name]: value
-        });
-      }
-    
-      handleSubmit(event) {
-        // e.g.: send to remote API
-        event.preventDefault();
-        console.log("state", this.state);
-        this.handleAssignDoctor(this.state.docAddress, this.state.patientId, this.state.patientAddress);
-      }
-
-      //admin dashboard show all patients me jo patiens ka data dikhega, 
-      //har patient data card me ye function call karne k lie button hoga
-      handleAssignDoctor = async (docAddress, patientId, patientAddress) => {
-        try {
-          var x = await this.contract.methods.assignDoctor(docAddress, patientId, patientAddress)
-          .send({ from: this.accounts[0] });
-          console.log("Doc Assigned" + x);
-        } catch (err) {
-          console.log(err);
+            patientsArray: []
         }
-      }
-    
-      render() {
-        return (
-          <div className="container-fluid">
-            <Jumbotron>
-              <h3 className="display-5">Assign a Doctor</h3>
-              <Form>
-                <Form.Text className="text-muted">
-                  We'll never share your details with anyone else.
-                </Form.Text>
-                <Form.Row>
-                  <Col>
-                    <Form.Control
-                      name="DocID"
-                      type="text"
-                      placeholder="Enter Doctor ID"
-                      onChange={this.handleChange}
-                      required
-                    />
-                  </Col>
-                </Form.Row>
-                <br />
-                <Form.Text>Patient ID: {this.state.patientID}</Form.Text>
-                <Form.Text>Patient Address: {this.state.patientAdd}</Form.Text>
-                <br />
-                <Form.Group>
-                  <Form.Check
-                    type="checkbox"
-                    label="Tick if the entered info is correct"
-                  />
-                </Form.Group>
-                <Button variant="primary" type="submit" onClick={this.handleSubmit}>
-                  Assign Doctor
-                </Button>
-              </Form>
-            </Jumbotron>
-          </div>
-        );
-      }
+        this.accounts = props.accounts;
+        this.contract = props.contract;
     }
+
+    componentDidMount = () => {
+        console.log(this.state.patientsArray);
+        this.handleShowAllPatients();
+    }
+
+    //adminDashBoard show all patients
+    handleShowAllPatients = async () => {
+        try {
+            // alert('check 0');
+        var count = await this.contract.methods.patientMappingCount().call();
+        console.log(count);
+        let patientsArray = [];
+        // alert("check 1");
+        for (let i = 0; i < count; i++) {
+            var x = await this.contract.methods.patientMapping(i).call();
+            patientsArray.push(x);
+        }
+        // alert('check 2');
+        this.setState({
+            patientsArray: patientsArray
+        })
+        // alert('check 3');
+        console.log("All Patients: " + JSON.stringify(this.state.patientsArray));   
+        } catch (err) {
+        console.log(err);
+        }
+        
+    }
+
+    render(){
+        const patientList = this.state.patientsArray.map((i, index) => 
+            <Card key={index}>
+                <Card.Content>
+                    <Card.Header>{i.name}</Card.Header>
+                    <Card.Meta><strong>Eth Address</strong> {i.patientAddress}</Card.Meta>
+                    <Card.Meta><strong>Email:</strong> {i.email}</Card.Meta>
+                    <Card.Meta><strong>Phone Number:</strong> {i.phoneNo}</Card.Meta>
+                </Card.Content>
+                <Card.Content extra>
+                    <div className='ui two buttons'>
+                    <Button basic color='blue'>
+                        Assign Doctor
+                    </Button>
+                    </div>
+                </Card.Content>
+            </Card>
+        )
+        return (
+            <div>
+                <center><h1 className="display-3">Patient List</h1>
+                <Card.Group>
+                  {patientList}
+                </Card.Group>
+                </center>
+            </div>
+        )
+    }
+}
