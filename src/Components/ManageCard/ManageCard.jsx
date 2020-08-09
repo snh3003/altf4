@@ -19,6 +19,8 @@ export const ManageCard = () => {
 
     return (
         <div className={styles.cardbg}>
+            <br />
+            <br />
             <center><h2 className="display-3">Manage patients data</h2></center>
             <br />
             <br />
@@ -50,7 +52,9 @@ export const ManageCard = () => {
                         </Card.Body>
                     </center>
                 </Card>
-            </CardGroup>      
+            </CardGroup>
+            <br />
+            <br />      
             <hr />            
         </div>
     )

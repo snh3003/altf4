@@ -24,9 +24,9 @@ export const Feature = () => {
 				<Card style={{ width: '18rem' }}>
 					<Card.Img variant="top" src={agreements} />
 					<Card.Body>
-						<Card.Title>Decentralized Network</Card.Title>
+						<Card.Title>Medical Records on IPFS</Card.Title>
 						<Card.Text>
-						A Blockchain is a decentralized database that stores a registry of assets and transactions across a peer-to-peer network. The “asset” may not only be money or transactional information, but also information regarding ownership, contracts, goods, and any other information. 
+						The InterPlanetary File System is a peer-to-peer hypermedia protocol designed to make the web faster, safer, and more open. This allows us to store medical records on IPFS and save their hash on blockchain. 
 						</Card.Text>						
 					</Card.Body>
 				</Card>
